@@ -10,12 +10,16 @@
   </head>
   <body>
     <form>
-      <input type="file" accept=".pdf" />
-      <input required placeholder="Name" type="text" />
+      <label for="profile">Profile Photo</label>
+      <input id="profile" accept=".pdf" type="file" />
+
+      <label for="First-Name">First Name</label>
+      <input id="First-Name" required placeholder="Name" type="text" />
+      <!-- id에 공백을 입력하지 말 것 -->
       <input required placeholder="Last Name" type="text" />
-      <input required placeholder="Username" type="text" />
-      <input minlength="10" required placeholder="Password" type="password" />
-      <input type="submit" value="Creat Account" />
+      <input required placeholder="userName" type="text" />
+      <input required minlength="10" placeholder="Password" type="password" />
+      <input type="submit" value="Create Account" />
     </form>
   </body>
 </html>
