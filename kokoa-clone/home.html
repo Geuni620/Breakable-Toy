@@ -3,26 +3,48 @@
   <head>
     <title>The Nico Times</title>
     <style>
+      * {
+        border: 1px dashed black;
+      }
       html {
         background-color: tomato;
       }
       body {
-        margin: 0px;s
+        margin: 20px;
+        padding: 20px;
         background-color: thistle;
       }
       div {
-        margin: 50px 99px;
-        height: 150px;
         width: 150px;
+        padding: 10px;
+      }
+      #first {
         background-color: whitesmoke;
+        width: 150px;
+        height: 150px;
+      }
+      #second {
+        background-color: teal;
+        width: 100px;
+        height: 100px;
+      }
+      #third {
+        background-color: wheat;
+        width: 50px;
+        height: 50px;
       }
       span {
-        display: block;
-        background-color: turquoise;
+        border-style: dotted;
       }
     </style>
   </head>
   <body>
-    <div></div>
+    <div id="first">
+      <div id="second">
+        <div id="third">
+          <span>hello!</span>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
