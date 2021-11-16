@@ -7,29 +7,30 @@
         height: 1000vh;
         margin: 50px;
       }
-      div {
-        width: 150px;
-        height: 150px;
-        background-color: wheat;
-        position: relative;
-      }
       span {
-        background-color: tomato;
+        background-color: yellowgreen;
+        margin: 0px 10px;
+        padding: 5px;
+        border-radius: 10px;
       }
-      span:nth-child(3n) {
-        background-color: teal;
+      p span {
+        color: white;
+      }
+      p + span {
+        text-decoration: underline;
       }
     </style>
   </head>
   <body>
-    <span>hello</span>
-    <span>hello</span>
-    <span>hello</span>
-    <span>hello</span>
-    <span>hello</span>
-    <span>hello</span>
-    <span>hello</span>
-    <span>hello</span>
-    <span>hello</span>
+    <div>
+      <!-- <span>hello</span> -->
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis alias ea,
+        ipsum ab facilis veritatis laboriosam deleniti. Deleniti quia rem
+        perspiciatis consectetur? Delectus illo minima, accusamus consequuntur
+        consectetur quos tenetur! <span>inside</span>
+      </p>
+      <span>hello</span>
+    </div>
   </body>
 </html>
