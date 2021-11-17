@@ -13,23 +13,22 @@
         padding: 5px;
         border-radius: 10px;
       }
-      input {
-        border: 1px solid wheat;
+      form {
+        border: 1px solid salmon;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
       }
-      input:required {
-        border-color: tomato;
-      }
-      input[placeholder~="name"] {
-        background-color: pink;
+      form:hover input:focus {
+        background-color: sienna;
       }
     </style>
   </head>
   <body>
-    <div>
-      <input type="text" placeholder="username" />
-      <input type="text" placeholder="First name" />
-      <input type="text" placeholder="Last name" />
-      <input type="password" required placeholder="password" />
-    </div>
+    <form>
+      <input type="text" name="" id="" />
+      <input type="text" name="" id="" />
+      <input type="text" name="" id="" />
+    </form>
   </body>
 </html>
