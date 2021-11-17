@@ -13,24 +13,23 @@
         padding: 5px;
         border-radius: 10px;
       }
-      p span {
-        color: white;
+      input {
+        border: 1px solid wheat;
       }
-      p + span {
-        text-decoration: underline;
+      input:required {
+        border-color: tomato;
+      }
+      input[placeholder~="name"] {
+        background-color: pink;
       }
     </style>
   </head>
   <body>
     <div>
-      <!-- <span>hello</span> -->
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis alias ea,
-        ipsum ab facilis veritatis laboriosam deleniti. Deleniti quia rem
-        perspiciatis consectetur? Delectus illo minima, accusamus consequuntur
-        consectetur quos tenetur! <span>inside</span>
-      </p>
-      <span>hello</span>
+      <input type="text" placeholder="username" />
+      <input type="text" placeholder="First name" />
+      <input type="text" placeholder="Last name" />
+      <input type="password" required placeholder="password" />
     </div>
   </body>
 </html>
