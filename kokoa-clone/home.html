@@ -3,38 +3,26 @@
   <head>
     <title>The Nico Times</title>
     <style>
-      :root {
-        --main-color: #1d0aee;
-        --default-border: 1px solid var(--main-color);
-      }
-      body {
-        height: 1000vh;
-        margin: 50px;
-      }
-      span {
-        background-color: yellowgreen;
-        margin: 0px 10px;
-        padding: 5px;
-        border-radius: 10px;
-      }
-      p {
-        background-color: var(--main-color);
-      }
       a {
-        color: var(--main-color);
-        border: var(--default-border);
+        color: white;
+        background-color: tomato;
+        text-decoration: none;
+        padding: 3px 5px;
+        border-radius: 5px;
+        font-size: 55px;
+        transition: all 1s ease-in-out;
+        /* 1. 어떤 것을 변화하게 만들 것인지 쓰기
+           2. 이 다음엔 얼마 동안 변화가 일어나게할지 정함
+           3. ease-in-out은 나중에 설명해줌(from Nico) */
+      }
+      a:hover {
+        border-radius: 20px;
+        color: tomato;
+        background-color: wheat;
       }
     </style>
   </head>
   <body>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, architecto
-      officiis! Repudiandae obcaecati neque sequi perferendis. Ut possimus quas
-      cupiditate distinctio tenetur incidunt libero qui fugit modi, harum nemo
-      officia?
-    </p>
-    <div>
-      <a href="#">website</a>
-    </div>
+    <a href="#">Go home</a>
   </body>
 </html>
