@@ -3,23 +3,17 @@
   <head>
     <title>The Nico Times</title>
     <style>
-      a {
-        color: white;
-        background-color: tomato;
-        text-decoration: none;
-        padding: 3px 5px;
-        border-radius: 5px;
-        font-size: 55px;
-        transition: all 1s cubic-bezier(0.785, 0.135, 0.15, 0.06);
+      img {
+        border: 5px solid red;
+        border-radius: 50%;
+        transition: transform 2s ease-in-out;
       }
-      a:hover {
-        border-radius: 20px;
-        color: tomato;
-        background-color: wheat;
+      img:hover {
+        transform: matrix(1, 2, 3, 4, 5, 6);
       }
     </style>
   </head>
   <body>
-    <a href="#">Go home</a>
+    <img src="img/a.jpg" />
   </body>
 </html>
