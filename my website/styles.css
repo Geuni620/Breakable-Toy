@@ -1,5 +1,6 @@
 @import url();
 @import "reset.css";
+@import "status-bar.css";
 
 #container {
   width: 100%;
@@ -7,6 +8,7 @@
 
 .left-container {
   width: 50%;
+  z-index: 1;
 }
 
 .right-container {
@@ -14,6 +16,7 @@
   width: 50%;
   height: 100vh;
   background-color: #8ea69b;
+  z-index: 0;
 }
 
 .right-container img {
