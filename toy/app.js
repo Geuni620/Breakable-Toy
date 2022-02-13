@@ -1,54 +1,49 @@
-const toDoForm = document.querySelector("#todo-form");
-const toDoInput = document.querySelector("#todo-form input");
-const toDoList = document.querySelector("#todo-list");
+/*
+5
+5 50 50 70 80 100
+7 100 95 90 80 70 60 50
+3 70 90 80
+3 70 90 81
+9 100 99 98 97 96 95 94 93 91
+*/
 
-let toDos = [];
-const TODOS_KEY = "toDos";
+const fs = require(`fs`);
+const input = fs.readFileSync("./input.txt").toString().split(`\n`);
+const inputC = +input[0]; //5
+const inputTestCase = [];
 
-function saveToDos() {
-  localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
-}
+for (let i = 1; i <= inputC; i++) {
+  const arr = input[i].split(` `).map((item) => +item);
+  const newArr = [];
+  for (j = 1; j <= arr[0]; j++) {
+    //5, 7, 3, 3, 3, 9
+    newArr.push(arr[j]);
+  }
 
-function deleteToDo(event) {
-  const li = event.target.parentElement;
-  toDos = toDos.filter((item) => item.id != parseInt(li.id));
-  li.remove();
-  saveToDos();
-}
-
-function paintTodo(newTodo) {
-  const li = document.createElement("li");
-  li.id = newTodo.id;
-  const span = document.createElement("span");
-  span.innerText = newTodo.text;
-
-  const button = document.createElement("button");
-  button.innerText = "X";
-  button.addEventListener("click", deleteToDo);
-  li.appendChild(span);
-  li.appendChild(button);
-  toDoList.appendChild(li);
-}
-
-function handleToDoSubmit(event) {
-  event.preventDefault();
-  const newTodo = toDoInput.value;
-  toDoInput.value = "";
-  const newTodoObj = {
-    text: newTodo,
-    id: Date.now(),
+  const testCase = {
+    N: arr[0],
+    arr: newArr,
   };
-  toDos.push(newTodoObj);
-  paintTodo(newTodoObj);
-  saveToDos();
+  inputTestCase.push(testCase);
 }
 
-toDoForm.addEventListener("submit", handleToDoSubmit);
-
-const savedToDos = localStorage.getItem(TODOS_KEY);
-
-if (savedToDos !== null) {
-  const parsedToDos = JSON.parse(savedToDos);
-  toDos = parsedToDos;
-  parsedToDos.forEach(paintTodo);
+/*
+C = 5
+testCase = [
+  {
+  N: 5,
+  arr : [50, 50, 70, 80, 100],
 }
+{
+N: 7,
+arr : [100, 95, 90, 80, 60, 60, 50],
+}
+...
+]
+
+*/
+function solution(C, testCase) {
+  console.log(`C :`, C);
+  console.log(`testCase :`, testCase);
+}
+solution(inputC, inputTestCase);
