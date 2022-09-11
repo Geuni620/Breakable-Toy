@@ -9,11 +9,6 @@ function Test1() {
     return;
   }, [number]);
 
-  // const sumFunction = () => {
-  //   console.log(`number ${number}`);
-  //   return;
-  // };
-
   useEffect(() => {
     console.log("sumFunction 변경되었습니다.");
   }, [sumFunction]);
