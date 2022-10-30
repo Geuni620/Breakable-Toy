@@ -1,6 +1,34 @@
 import React, {useState, useCallback, useEffect} from "react";
 
-function Test2() {
+export function ReactCallback1() {
+  const [number, setNumber] = useState(0);
+  const [toggle, setToggle] = useState(true);
+
+  const sumFunction = useCallback(() => {
+    console.log(`number ${number}`);
+    return;
+  }, [number]);
+
+  useEffect(() => {
+    console.log("sumFunction 변경되었습니다.");
+  }, [sumFunction]);
+
+  return (
+    <div className="App">
+      <input
+        type="number"
+        value={number}
+        onChange={(e) => setNumber(e.target.value)}
+      />
+      <button onClick={() => setToggle((prev) => !prev)}>
+        {toggle.toString()}
+      </button>
+      <button onClick={sumFunction}>Call</button>
+    </div>
+  );
+}
+
+export function ReactCallback2() {
   const [size, setSize] = useState(100);
   const [isDark, setIsDark] = useState(false);
 
@@ -24,8 +52,6 @@ function Test2() {
     </div>
   );
 }
-
-export default Test2;
 
 function Box({createStyleBox}) {
   const [style, setStyle] = useState({});
