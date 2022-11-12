@@ -1,0 +1,39 @@
+@-webkit-keyframes SHOW-BOX {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes SHOW-BOX {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes SHOW-BOX {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes SHOW-BOX {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.show-box {
+  -webkit-animation: SHOW-BOX 2s ease;
+  -moz-animation: SHOW-BOX 2s ease;
+  -o-animation: SHOW-BOX 2s ease;
+  animation: SHOW-BOX 2s ease;
+}
