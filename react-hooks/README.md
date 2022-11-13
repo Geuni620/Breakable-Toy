@@ -11,3 +11,7 @@
 <br>
 
 [useReducer 확실히 정리해드려요](https://youtu.be/tdORpiegLg0)
+
+<br>
+
+[useRef 완벽 정리 1# 변수 관리](https://youtu.be/VxqZrL4FLz8)
