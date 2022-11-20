@@ -37,3 +37,12 @@
   -o-animation: SHOW-BOX 2s ease;
   animation: SHOW-BOX 2s ease;
 }
+
+.box-info {
+  text-align: center;
+}
+
+.mg-10 {
+  margin: 10px;
+  color: red;
+}
