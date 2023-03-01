@@ -4,6 +4,7 @@ import ReactMemo from "./ReactMemo";
 import {ReactCallback1, ReactCallback2} from "./ReactCallback";
 import {ReactReducer} from "./ReactReducer";
 import {ReactRef1, ReactRef2, ReactRef3} from "./ReactRef";
+import {ReactClass} from "./ReactClass";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/ref1" element={<ReactRef1 />} />
         <Route path="/ref2" element={<ReactRef2 />} />
         <Route path="/ref3" element={<ReactRef3 />} />
+        <Route path="/class" element={<ReactClass />} />
       </Routes>
     </Router>
   );
