@@ -16,7 +16,3 @@ Greetings.defaultProps = {
 };
 
 export default Greetings;
-
-function Greeting({name}: React.FC<GreetingsProps>) {
-  return <h1>Hello</h1>;
-}
